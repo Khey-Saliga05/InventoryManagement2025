@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #2c2f48;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ims2.LoginController">
+   <VBox prefHeight="800.0" prefWidth="1400.0">
+      <children>
+         <HBox alignment="BOTTOM_CENTER" prefHeight="51.0" prefWidth="1400.0" style="-fx-background-color: #003366;">
+            <children>
+                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="539.0" text="INVENTORY MANAGEMENT SYSTEM" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                         <Font name="Verdana Bold Italic" size="25.0" />
+                     </font>
+                     <padding>
+                         <Insets bottom="9.0" left="10.0" />
+                     </padding>
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                 </Label>
+            </children></HBox>
+          <VBox fx:id="handleForgotPassword" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="1400.0" spacing="20.0" style="-fx-background-color: #2c2f48;">
+               <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="47.0" prefWidth="355.0" text="Log In" textFill="WHITE">
+                   <font>
+                       <Font name="Verdana Bold" size="30.0" />
+                   </font>
+               <VBox.margin>
+                  <Insets bottom="-13.0" />
+               </VBox.margin>
+               </Label>
+              <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="600.0">
+                  <TextField fx:id="UsernameField" prefHeight="41.0" prefWidth="364.0" promptText="Enter Username" style="-fx-background-radius: 20; -fx-background-color: white;">
+                      <font>
+                          <Font name="Verdana" size="14.0" />
+                      </font>
+                  </TextField>
+              </HBox>
+              <HBox alignment="CENTER" prefHeight="47.0" prefWidth="600.0">
+                  <StackPane prefHeight="41.0" prefWidth="364.0">
+                      <TextField fx:id="passwordTextField" prefHeight="41.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                          <font>
+                              <Font name="Verdana" size="14.0" />
+                          </font>
+                      </TextField>
+                      <PasswordField fx:id="PasswordField" prefHeight="41.0" prefWidth="364.0" promptText="Enter Password" style="-fx-background-radius: 20; -fx-background-color: white;">
+                          <font>
+                              <Font name="Verdana" size="14.0" />
+                          </font>
+                      </PasswordField>
+                  <HBox.margin>
+                     <Insets top="2.0" />
+                  </HBox.margin>
+                  </StackPane>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+              </HBox>
+            <HBox maxWidth="-Infinity" prefHeight="30.0" prefWidth="351.0" spacing="64.0">
+               <children>
+                    <CheckBox fx:id="toggleShowPassword" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toggleShowPassword" prefHeight="27.0" prefWidth="158.0" text="Show Password" textAlignment="JUSTIFY" textFill="LIGHTGRAY" textOverrun="CENTER_ELLIPSIS">
+                        <font>
+                            <Font name="Verdana" size="14.0" />
+                        </font>
+                    </CheckBox>
+                  <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handleForgotPassword" style="-fx-background-color: transparent;" text="Forgot Password" textFill="LIGHTGRAY" underline="true">
+                     <font>
+                        <Font name="Verdana" size="13.5" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="-1.0" top="-5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="-13.0" />
+               </VBox.margin>
+            </HBox>
+              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="364.0" style="-fx-background-radius: 50; -fx-background-color: transparent; -fx-border-radius: 50; -fx-border-color: #16A085; -fx-border-width: 2;" text="Login" textFill="#16a085">
+                  <font>
+                      <Font name="Verdana Bold" size="15.0" />
+                  </font>
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+              </Button>
+            <Label text="-- OR --" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="375.0" mnemonicParsing="false" onAction="#goToCreateAcc" prefHeight="46.0" prefWidth="364.0" style="-fx-background-radius: 50; -fx-background-color: transparent; -fx-border-radius: 50; -fx-border-color: #0492c2; -fx-border-width: 2;" text="Create New Account" textFill="#0492c2">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font>
+            </Button>
+          </VBox>
+      </children></VBox>
+</StackPane>

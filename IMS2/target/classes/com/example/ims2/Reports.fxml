@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" fillWidth="true" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #2c2f48;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ims2.Reports">
+    <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1400.0" style="-fx-background-color: #003366;">
+        <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="463.0" text="Inventory Reports" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="Verdana Bold Italic" size="26.0" />
+                </font>
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </Label>
+        </children>
+        <VBox.margin>
+            <Insets bottom="18.0" />
+        </VBox.margin>
+    </HBox>
+    <HBox prefHeight="52.0" prefWidth="1400.0">
+        <children>
+            <Label fx:id="time" prefHeight="52.0" prefWidth="310.0" textFill="WHITE">
+                <font>
+                    <Font name="Verdana Bold" size="15.0" />
+                </font>
+                <HBox.margin>
+                    <Insets left="30.0" top="1.0" />
+                </HBox.margin>
+            </Label>
+        </children>
+        <VBox.margin>
+            <Insets bottom="19.0" top="-71.0" />
+        </VBox.margin>
+    </HBox>
+    <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="1400.0" spacing="5.0">
+        <children>
+            <Button fx:id="btnProductList" alignment="CENTER" contentDisplay="CENTER" layoutX="1306.0" layoutY="17.0" mnemonicParsing="false" onAction="#goToProductList" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #4f81bd; -fx-background-radius: 20;" text="Product List" textFill="WHITE">
+                <font>
+                    <Font name="Verdana Bold" size="14.0" />
+                </font>
+                <HBox.margin>
+                    <Insets right="9.0" top="2.0" />
+                </HBox.margin>
+            </Button>
+            <Button fx:id="brnReturn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnReturn" prefHeight="36.0" prefWidth="60.0" style="-fx-background-color: #4f81bd; -fx-background-radius: 20;" text="➥" textFill="WHITE">
+                <font>
+                    <Font name="Verdana Bold" size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets right="30.0" top="2.0" />
+                </HBox.margin>
+            </Button>
+        </children>
+        <VBox.margin>
+            <Insets bottom="8.0" top="-69.0" />
+        </VBox.margin>
+    </HBox>
+   <VBox alignment="TOP_CENTER" prefHeight="730.0" prefWidth="1400.0">
+      <children>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1400.0" spacing="50.0">
+            <children>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: RoyalBlue; -fx-background-radius: 10;">
+                    <Label fx:id="totalstockin" alignment="CENTER" prefHeight="85.0" prefWidth="192.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="45.0" />
+                        </font>
+                    </Label>
+                    <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="192.0" text="Total Stock In" textFill="WHITE">
+                        <font>
+                            <Font name="Verdana" size="18.0" />
+                        </font>
+                    </Label>
+                </VBox>
+               <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: RoyalBlue; -fx-background-radius: 10;">
+                  <children>
+                     <Label fx:id="totalstockout" alignment="CENTER" prefHeight="85.0" prefWidth="192.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="45.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="192.0" text="Total Stock Out" textFill="WHITE">
+                        <font>
+                           <Font name="Verdana" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" layoutX="205.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: RoyalBlue; -fx-background-radius: 10;">
+                  <children>
+                     <Label fx:id="totalstock" alignment="CENTER" prefHeight="85.0" prefWidth="192.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="45.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="192.0" text="Available Stock/s" textFill="WHITE">
+                        <font>
+                           <Font name="Verdana" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" layoutX="853.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: RoyalBlue; -fx-background-radius: 10;">
+                  <children>
+                     <Label fx:id="totalarchive" alignment="CENTER" prefHeight="85.0" prefWidth="192.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="45.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="192.0" text="Total Archived Prod" textFill="WHITE">
+                        <font>
+                           <Font name="Verdana" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1400.0">
+            <children>
+                 <TextField fx:id="searchField" onAction="#onSearch" prefHeight="41.0" prefWidth="400.0" promptText="Search Item (Barcode/Product Name/Category)" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <HBox.margin>
+                         <Insets left="50.0" />
+                     </HBox.margin>
+                     <font>
+                         <Font name="Verdana" size="14.0" />
+                     </font>
+                 </TextField>
+                 <Button fx:id="searchButton" alignment="CENTER" minWidth="54.0" mnemonicParsing="false" onAction="#onSearch" prefHeight="74.0" prefWidth="86.0" style="-fx-background-radius: 20; -fx-background-color: transparent;" text="🔍" textFill="WHITE">
+                     <HBox.margin>
+                         <Insets bottom="7.0" left="-10.0" top="-2.0" />
+                     </HBox.margin>
+                     <font>
+                         <Font name="Verdana" size="30.0" />
+                     </font>
+                     <padding>
+                         <Insets top="5.0" />
+                     </padding>
+                 </Button>
+            </children>
+            <VBox.margin>
+               <Insets top="2.0" />
+            </VBox.margin>
+         </HBox>
+          <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="51.0" prefWidth="1400.0" spacing="24.0" style="-fx-background-color: transparent;">
+            <Label text="Category:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="-15.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="categoryComboBox" prefHeight="40.0" prefWidth="188.0" promptText="FIlter By Category" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></ComboBox>
+            <Label layoutX="716.0" layoutY="27.0" text="Date:" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="-15.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="yearCB" layoutX="867.0" layoutY="16.0" prefHeight="40.0" prefWidth="100.0" promptText="Year" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="-15.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox fx:id="monthCB" layoutX="1092.0" layoutY="16.0" prefHeight="40.0" prefWidth="100.0" promptText="Month" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="-15.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox fx:id="weekCB" layoutX="830.0" layoutY="16.0" prefHeight="40.0" prefWidth="100.0" promptText="Week" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <HBox.margin>
+                  <Insets right="-15.0" />
+               </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="dayCB" layoutX="1155.0" layoutY="16.0" prefHeight="40.0" prefWidth="100.0" promptText="Day" style="-fx-background-color: white; -fx-background-radius: 20;" />
+              <VBox.margin>
+                  <Insets top="1.0" />
+              </VBox.margin>
+          </HBox>
+         <Button fx:id="recalculateButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onRecalculateTotalsClicked" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: #4f81bd; -fx-background-radius: 20;" text="Recalculate" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="1.0" top="5.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Verdana Bold" size="14.0" />
+            </font>
+         </Button>
+          <HBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="1300.0">
+              <VBox.margin>
+                  <Insets top="9.0" />
+              </VBox.margin>
+              <TableView fx:id="productTable" editable="true" prefHeight="500.0" prefWidth="1300.0">
+                  <columns>
+                  <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+                      <TableColumn fx:id="usercolumn" prefWidth="75.0" text="User" />
+                      <TableColumn fx:id="barcodeColumn" text="Product ID" />
+                      <TableColumn fx:id="nameColumn" prefWidth="160.0" text="Product Name" />
+                      <TableColumn fx:id="unitColumn" prefWidth="104.0" text="Unit of Measure" />
+                      <TableColumn fx:id="categoryColumn" prefWidth="75.20001220703125" text="Category" />
+                      <TableColumn fx:id="quantityColumn" prefWidth="75.20001220703125" text="Stock" />
+                      <TableColumn fx:id="unitCostColumn" prefWidth="75.19992065429688" text="Unit Cost" />
+                      <TableColumn fx:id="totalCostColumn" prefWidth="74.39996337890625" text="Total Cost" />
+                  <TableColumn fx:id="totalstockincolumn" text="Total Stock-In" />
+                  <TableColumn fx:id="totalstockoutcolumn" text="Total Stock-Out" />
+                      <TableColumn fx:id="statusColumn" text="Status" />
+                  </columns>
+                  <columnResizePolicy>
+                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+              </TableView>
+          </HBox>
+      </children>
+   </VBox>
+</VBox>
